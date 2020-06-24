@@ -6,41 +6,40 @@ import java.util.Scanner;
 
 public class Mnogomern5 {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        int a = scan.nextInt();
-        int [] [] massiv = new int[a][a];
-
-        for(int dl = 0; dl < massiv.length; dl++){
-            for(int dl2 = 0; dl2 <massiv[0].length; dl2++){
-                int rand = (int)(Math.random()*15);
-                massiv[dl][dl2]= rand;
-                System.out.print(massiv[dl][dl2] + " ");}
-            System.out.println();
-        }
-        System.out.println();
-        int index = 0;
-        int index2 = 0;
-        int fg = 0;
-        int stolbec = 0;
-
-        int [] [] massive2 = new int[a][a];
-        for(int stroka = 0; stroka < massive2.length; stroka++){
-
-            for (; stolbec < massive2[0].length; stolbec++){
-
-
-                for(; fg < massiv.length; fg++){
-
+            Scanner scan = new Scanner(System.in);
+            int a = scan.nextInt();
+            Random r = new Random();
+            int [] [] massive2 = new int [5][5];
+            int [] [] massiv = new int[5] [5];
+            for (int s = 0; s < massiv.length; s++){
+                for(int f = 0; f < massiv[0].length; f++){
+                    massiv[s][f] = r.nextInt(10);
                 }
-                massive2 [stroka][stolbec] = massiv[fg][0];
-                System.out.print(massive2[stroka][stolbec]+ " ");
+            }
 
+            for (int s = 0; s < massiv.length; s++){
+                for(int f = 0; f < massiv[0].length; f++){
+                    System.out.print(massiv[s] [f] + " ");
+                }
+                System.out.println();
             }
-            System.out.println();
+            System.out.println("*********");
+
+            for (int s = 0; s < massiv.length; s++) {
+                for (int f = 0; f < massiv[0].length; f++) {
+                    massive2[f][s]  = massiv[s][f];
+                }
             }
-            index2++;
+            for (int s = 0; s < massiv.length; s++){
+                for(int f = 0; f < massiv[0].length; f++){
+                    System.out.print(massive2[s] [f] + " ");
+                }
+                System.out.println();
+            }
+
 
         }
 
 
     }
+
