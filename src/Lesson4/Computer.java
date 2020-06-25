@@ -92,5 +92,8 @@ public class Computer {
             break;
         }
     }
+//public String speak(int random, int scanValue){
+  //      return random, scanValue;
+//}
 }
 
