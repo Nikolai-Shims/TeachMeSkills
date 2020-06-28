@@ -28,17 +28,18 @@ public class AirMilitary extends Air{
             System.out.println("Ракета пошла!");
         }
         else {
-            System.out.println("Ракеты отсутствуют");
+            System.out.println("Ракеты отсутствуют.");
         }
     }
     public void catapult () {
         if(catapult == true){
-            System.out.println("Катапультирование прошло успешною");
+            System.out.println("Катапультирование прошло успешно.");
         }
         else {
             System.out.println("У вас нет такой системы.");
         }
     }
+
     public void descriptionAirMilitary(){
         System.out.println(descriptionAir() + ", наличие катапульты " + catapult + ", количество ракет: " + countRocket + ".");
         System.out.println("Мощность в Kwt: " + getKwt());
@@ -56,6 +57,11 @@ public class AirMilitary extends Air{
        ff.setSizeWings(30);
        ff.descriptionAirMilitary();
        ff.shoot();
+       ff.catapult();
 
+       AirMilitary ff150 = new AirMilitary("TY160",2000,1800,1360,(float)15.4,230,false,0);
+       ff150.descriptionAirMilitary();
+       ff150.catapult();
+       ff150.shoot();
     }
 }
