@@ -17,8 +17,11 @@ public class TruckCars extends Ground{
         this.setFuelConsuption(fuelConsuption);
         this.setCarrying(carrying);
     }
-    public void descriptionTruck(){
-        System.out.println(descriptionGround() + ", максимальная загрузка: " + carrying );
+
+    @Override
+    public void descriptionGround() {
+        super.descriptionGround();
+        System.out.println(", максимальная загрузка: " + carrying );
         System.out.println("мощность в Kwt = "+ getKwt());
     }
 
@@ -46,11 +49,11 @@ public class TruckCars extends Ground{
         dd.setPower(350);
         dd.setBrand("Volvo");
         dd.setCarrying(8000);
-        dd.descriptionTruck();
+        dd.descriptionGround();
         dd.checkTruckWeight();
 
         TruckCars eee = new TruckCars("scania",310,140,5000,6,(float)20.3,10000);
-        eee.descriptionTruck();
+        eee.descriptionGround();
         eee.checkTruckWeight();
     }
 

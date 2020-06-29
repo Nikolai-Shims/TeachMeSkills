@@ -9,6 +9,27 @@ import java.util.Scanner;
 public class PassengerCars extends Ground {
     private String carBody;
     private int amountPassenger;
+    public static void main(String[] args) throws IOException {
+        PassengerCars ss = new PassengerCars();
+        ss.setAmountWheels(4);
+        ss.setBrand("audi");
+        ss.setMaxSpeed(260);
+        ss.setWeight(2000);
+        ss.setPower(190);
+        ss.setAmountPassenger(5);
+        ss.setCarBody("sedan");
+        ss.setFuelConsuption(10);
+        ss.descriptionGround();
+        System.out.println();
+        ss.maxCharacteristic();
+
+
+
+        PassengerCars toyota = new PassengerCars("Toyota", 110, 150,1200, 4, (float) 7.5,"седан",5);
+        toyota.descriptionGround();
+        toyota.maxCharacteristic();
+    }
+
    PassengerCars(){}
     PassengerCars(String brand, int power, int maxSpeed, int weight, int amountWheels, float fuelConsuption, String carBody, int amountPassenger){
     this.setBrand(brand);
@@ -27,10 +48,7 @@ public class PassengerCars extends Ground {
     public void setAmountPassenger(int amountPassenger) { this.amountPassenger = amountPassenger; }
     public int getAmountPassenger() { return amountPassenger; }
 
-    public void descriptionPassengerCars() {
-        System.out.println(descriptionGround() + ", тип кузова " + getCarBody() + ", вместимость пассажиров: " + getAmountPassenger() + ".");
-        System.out.println("Мощность в Kwt = " + getKwt() + ".");
-    }
+
 
     private void maxCharacteristic() {
         System.out.println("Введите время: ");
@@ -44,25 +62,11 @@ public class PassengerCars extends Ground {
                 "проедет " + r + " км и израсходует " + liter + " литров топлива.";
         System.out.println(text);}
 
-    public static void main(String[] args) throws IOException {
-        PassengerCars ss = new PassengerCars();
-        ss.setAmountWheels(4);
-        ss.setBrand("audi");
-        ss.setMaxSpeed(260);
-        ss.setWeight(2000);
-        ss.setPower(190);
-        ss.setAmountPassenger(5);
-        ss.setCarBody("sedan");
-        ss.setFuelConsuption(10);
-        ss.descriptionPassengerCars();
-        System.out.println();
-        ss.maxCharacteristic();
-
-
-
-        PassengerCars toyota = new PassengerCars("Toyota", 110, 150,1200, 4, (float) 7.5,"седан",5);
-        toyota.descriptionPassengerCars();
-        toyota.maxCharacteristic();
+    @Override
+    public void descriptionGround() {
+        super.descriptionGround();
+        System.out.println(", тип кузова " + getCarBody() + ", вместимость пассажиров: " + getAmountPassenger() + ".");
+        System.out.println("Мощность в Kwt = " + getKwt() + ".");
     }
 
 }

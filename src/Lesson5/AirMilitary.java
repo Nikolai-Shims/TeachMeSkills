@@ -40,10 +40,14 @@ public class AirMilitary extends Air{
         }
     }
 
-    public void descriptionAirMilitary(){
-        System.out.println(descriptionAir() + ", наличие катапульты " + catapult + ", количество ракет: " + countRocket + ".");
+    @Override
+    public void descriptionAir() {
+        super.descriptionAir();
+        System.out.println(", наличие катапульты " + catapult + ", количество ракет: " + countRocket + ".");
         System.out.println("Мощность в Kwt: " + getKwt());
     }
+
+
 
     public static void main(String[] args) throws IOException {
        AirMilitary ff = new AirMilitary();
@@ -55,12 +59,12 @@ public class AirMilitary extends Air{
        ff.setPower(2000);
        ff.setRunawayLength(500);
        ff.setSizeWings(30);
-       ff.descriptionAirMilitary();
+       ff.descriptionAir();
        ff.shoot();
        ff.catapult();
 
        AirMilitary ff150 = new AirMilitary("TY160",2000,1800,1360,(float)15.4,230,false,0);
-       ff150.descriptionAirMilitary();
+       ff150.descriptionAir();
        ff150.catapult();
        ff150.shoot();
     }

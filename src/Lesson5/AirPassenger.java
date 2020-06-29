@@ -41,10 +41,13 @@ public class AirPassenger extends Air {
         }
     }
 
-    public void descriptionAirpassenger(){
-        System.out.println(descriptionAir() + "м, колличество пассажиров " + getCountPassenger() + " наличие бизнес класса " + getBussinesClass());
+    @Override
+    public void descriptionAir() {
+        super.descriptionAir();
+        System.out.println("м, колличество пассажиров " + getCountPassenger() + " наличие бизнес класса " + getBussinesClass());
         System.out.println("Мощность в Kwt: " + getKwt());
     }
+
 
     public static void main(String[] args) throws IOException {
         AirPassenger as = new AirPassenger();
@@ -56,11 +59,11 @@ public class AirPassenger extends Air {
         as.setMaxSpeed(900);
         as.setPower(1700);
         as.setBrand("boing");
-        as.descriptionAirpassenger();
+        as.descriptionAir();
         as.checkCountPassenger();
 
         AirPassenger ad = new AirPassenger("boing",1500,780,9850,(float)180.5,1250,90,true);
-        ad.descriptionAirpassenger();
+        ad.descriptionAir();
         ad.checkCountPassenger();
     }
 

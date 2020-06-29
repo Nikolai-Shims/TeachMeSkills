@@ -1,10 +1,10 @@
 package Lesson5;
 
 public abstract class Transport {
-    private String brand;
-    private int power;
-    private int maxSpeed;
-    private int weight;
+    protected String brand;
+    protected int power;
+    protected int maxSpeed;
+    protected int weight;
 
     public int getWeight() { return weight; }
     public void setWeight(int weight) { this.weight = weight; }

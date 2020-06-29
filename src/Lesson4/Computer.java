@@ -20,15 +20,10 @@ public class Computer {
 
     public void characteristics() throws Exception {
         System.out.println("*");
-        Thread.sleep(1000);
         System.out.println("процессор - " + processor);
-        Thread.sleep(1000);
         System.out.println("Оперативная память DDR на " + ddr + " Gb.");
-        Thread.sleep(1000);
         System.out.println("Жесткий диск на " + ssd + " Gb.");
-        Thread.sleep(1000);
         System.out.println("ресурс компьютера:  " + resyrsCompa);
-        Thread.sleep(1000);
         System.out.println("*");
         System.out.println();
     }
