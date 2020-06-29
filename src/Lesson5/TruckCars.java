@@ -7,16 +7,10 @@ public class TruckCars extends Ground{
     float carrying;
     public void setCarrying(float carrying){ this.carrying = carrying; }
     public float getCarrying(){ return carrying; }
-    TruckCars(){}
-    TruckCars(String brand, int power, int maxSpeed, int weight, int amountWheels,float fuelConsuption,float carrying){
-        this.setBrand(brand);
-        this.setPower(power);
-        this.setMaxSpeed(maxSpeed);
-        this.setWeight(weight);
-        this.setAmountWheels(amountWheels);
-        this.setFuelConsuption(fuelConsuption);
-        this.setCarrying(carrying);
-    }
+
+
+
+
 
     @Override
     public void descriptionGround() {
@@ -24,6 +18,11 @@ public class TruckCars extends Ground{
         System.out.println(", максимальная загрузка: " + carrying );
         System.out.println("мощность в Kwt = "+ getKwt());
     }
+    TruckCars(String brand, int power, int maxSpeed, int weight, int amountWheels, float fuelConsuption, float carrying) {
+        super(brand, power, maxSpeed, weight, amountWheels, fuelConsuption);
+        this.carrying = carrying;
+    }
+    TruckCars(){}
 
 
     public void checkTruckWeight(){

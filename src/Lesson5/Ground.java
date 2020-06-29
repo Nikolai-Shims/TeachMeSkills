@@ -6,6 +6,17 @@ public abstract class Ground extends Transport{
     protected int amountWheels;
     protected float fuelConsuption;
 
+    Ground(String brand,int power, int maxSpeed, int weight, int amountWheels, float fuelConsuption){
+        super.brand = brand;
+        super.power =power;
+        super.maxSpeed = maxSpeed;
+        super.weight = weight;
+        this.amountWheels = amountWheels;
+        this.fuelConsuption = fuelConsuption;
+    }
+Ground(){}
+
+
     public void setAmountWheels(int amountWheels){ this.amountWheels = amountWheels; }
     public int getAmountWheels() { return amountWheels; }
 
