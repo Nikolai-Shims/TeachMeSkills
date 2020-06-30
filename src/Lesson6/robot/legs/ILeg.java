@@ -1,4 +1,4 @@
-package Lesson6.legs;
+package Lesson6.robot.legs;
 
 public interface ILeg {
     void step();

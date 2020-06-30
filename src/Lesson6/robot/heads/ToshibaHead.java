@@ -1,17 +1,14 @@
-package Lesson6.heads;
+package Lesson6.robot.heads;
 
-public class SamsungHead implements IHead{
+public class ToshibaHead implements IHead{
     private int price;
-    SamsungHead(int price) {
-        this.price = price;
-    }
-    SamsungHead(){}
+    public ToshibaHead(int price){this.price = price; }
+    public ToshibaHead(){}
 
     @Override
     public void speek() {
         System.out.println("Говорит голова Toshiba");
     }
-
     @Override
     public int getPrice() {
         return price;

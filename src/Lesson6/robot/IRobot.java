@@ -1,4 +1,4 @@
-package Lesson6;
+package Lesson6.robot;
 
 public interface IRobot {
     void action();

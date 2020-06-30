@@ -1,9 +1,9 @@
-package Lesson6.hands;
+package Lesson6.robot.hands;
 
 public class SamsungHand implements IHand{
     private int price;
-    SamsungHand(int price){ this.price = price; }
-    SamsungHand(){}
+    public SamsungHand(int price){ this.price = price; }
+    public SamsungHand(){}
 
 
     @Override

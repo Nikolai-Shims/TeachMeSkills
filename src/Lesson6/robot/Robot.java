@@ -1,8 +1,8 @@
-package Lesson6;
+package Lesson6.robot;
 
-import Lesson6.hands.IHand;
-import Lesson6.heads.IHead;
-import Lesson6.legs.ILeg;
+import Lesson6.robot.hands.IHand;
+import Lesson6.robot.heads.IHead;
+import Lesson6.robot.legs.ILeg;
 
 public class Robot implements IRobot {
 

@@ -1,4 +1,4 @@
-package Lesson6.heads;
+package Lesson6.robot.heads;
 
 public interface IHead {
     void speek();

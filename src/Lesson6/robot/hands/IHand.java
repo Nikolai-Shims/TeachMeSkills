@@ -1,4 +1,4 @@
-package Lesson6.hands;
+package Lesson6.robot.hands;
 
 public interface IHand {
     void upHand();
