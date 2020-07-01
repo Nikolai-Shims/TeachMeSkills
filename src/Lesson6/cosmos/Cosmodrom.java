@@ -1,18 +1,18 @@
 package Lesson6.cosmos;
 
 public class Cosmodrom {
-    IStart pes;
+    IStart object;
 
 
-    public Cosmodrom(IStart korable){
-        this.pes = korable;
+    public Cosmodrom(IStart cosmosShip){
+        this.object = cosmosShip;
     }
 
 
     public void zapysk() {
-       pes.checkSistem();
-       pes.startEngine();
-       pes.startStart();
+       object.checkSistem();
+       object.startEngine();
+       object.startStart();
     }
 
 }
