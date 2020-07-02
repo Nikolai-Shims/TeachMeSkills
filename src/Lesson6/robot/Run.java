@@ -27,17 +27,15 @@ public class Run {
 
         SonyHead sonyHead = new SonyHead(15);
         SamsungHead samsungHead = new SamsungHead(17);
-        ToshibaHead toshibaHead = new ToshibaHead(20);
 
         SonyLeg sonyLeg = new SonyLeg(25);
-        SamsungLeg samsungLeg = new SamsungLeg(19);
         ToshibaLeg toshibaLeg = new ToshibaLeg(24);
 
         ToshibaHand toshibaHand = new ToshibaHand(50);
         SonyHand sonyHand = new SonyHand(45);
-        SamsungHand samsungHand = new SamsungHand( 39);
 
-        Robot robocop1 = new Robot(toshibaHead,toshibaHand,samsungLeg);
+
+        Robot robocop1 = new Robot(new ToshibaHead(12),new SamsungHand(39),new SamsungLeg(19));
         System.out.println("Новый робот Robocop, создан.");
         robocop1.action();
         System.out.println("Цена робота №1 составляет: " + robocop1.getPrice());
@@ -52,9 +50,22 @@ public class Run {
         System.out.println();
 
         Robot robocop3 = new Robot(samsungHead,sonyHand,toshibaLeg);
+
         System.out.println("Новый робот Robocop3, создан.");
         robocop3.action();
         System.out.println("Цена робота №3 составляет: " + robocop3.getPrice());
+
+
+
+        System.out.println("***");
+        if(robocop1.getPrice() > robocop2.getPrice() && robocop1.getPrice() > robocop3.getPrice()){
+            System.out.println(" Робот №1 самый дорогой.");
+        }
+        else if(robocop2.getPrice() > robocop1.getPrice() && robocop2.getPrice() > robocop3.getPrice()){
+            System.out.println("Робот №2 самый дорогой.");
+        }
+        else
+            System.out.println("робот №3 самый дорогой.");
 
 
     }

@@ -23,11 +23,11 @@ public class Shuttle implements IStart{
 
         if(random > 3){
             a = true;
-            System.out.println("Проверка прошла успешно!");
+            System.out.println("Проверка Shuttle прошла успешно!");
         }
         else {
             a = false;
-            System.out.println("Предстартовая проверка провалилась."); }
+        }
 
         return a;
     }

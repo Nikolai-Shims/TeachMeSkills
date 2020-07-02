@@ -18,11 +18,12 @@ public class SpaceX implements IStart{
 
         if(random > 3){
             a = true;
-            System.out.println("Проверка прошла успешно!");
+            System.out.println("Проверка SpaceX прошла успешно!");
         }
         else {
             a = false;
-            System.out.println("Предстартовая проверка провалилась."); }
+            //System.out.println("Предстартовая проверка провалилась.");
+            }
 
         return a;
 
