@@ -9,6 +9,8 @@ public class HomeWork7 {
         buf.delete(buf.indexOf("big"),10);
         System.out.println(buf);
         System.out.println("*******************************");
+
+
         //задание 2.
         String str2 = "Fаменить все вхождения символа стоящего в позиции (3) на сивол стоящий в позиции 0.";
         System.out.println( str2);
@@ -23,6 +25,8 @@ public class HomeWork7 {
         String str2new = String.valueOf(massivstr2);
         System.out.println(str2new);
         System.out.println("********************************");
+
+
         //задание 3.
         String str3 = "Задача: найти, в строке не только запятые, но и другие знаки препинания!? - Подсчитать общее их количество..";
         int count = 0;
@@ -38,24 +42,21 @@ public class HomeWork7 {
         }
         System.out.println("всего " + count + " знаков препинания.");
         System.out.println("**************************************");
+
+
         //задание 4.
         //Имеется строка с текстом. Вывести текст, составленный из последних букв всех слов.
-        String str4 = "Привет большой и огромный мир";
+        String str4 = "Привет, большой и огромный мир..!";
         System.out.println(str4);
-        String[]task4 = str4.split( " +");
-
+        String s4 = str4.replaceAll("[,.!?]", " ");
+        String[]task4 = s4.trim().split(" +");
+        String[] t4 = new String[task4.length];
         for(int a = 0; a < task4.length; a++){
-            char dse = 0;                                          //= task4[a].charAt(task4[a].length()-1);
-            for(int m = 0; m < massiv2.length; m++){
-                if(task4[a].charAt(task4[a].length()-1) != massiv2[m]){
-                     dse = task4[a].charAt(task4[a].length()-1);
-                }
-                else{
-                     dse = task4[a].charAt(task4[a].length()-2);
-                }
-            }
-            System.out.print(dse);
-            }
+            t4[a] = String.valueOf(task4[a].charAt(task4[a].length()-1));
+        }
+        String lasresult = String.join("", t4);
+        System.out.println(lasresult);
+
     }
 }
 
