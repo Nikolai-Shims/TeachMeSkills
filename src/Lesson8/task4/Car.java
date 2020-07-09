@@ -17,7 +17,9 @@ public class Car implements Serializable {
         return brand;
     }
 
+    public void setMaxSpeed(int maxSpeed){this.maxSpeed = maxSpeed;}
+    public int getMaxSpeed(){ return maxSpeed; }
 
-
-
+    public int getPrice(){ return price; }
+    public void setPrice(int price){ this.price = price; }
 }
