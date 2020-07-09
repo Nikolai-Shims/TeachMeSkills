@@ -7,6 +7,17 @@ import java.io.*;
 public class Run {
     public static void main(String[] args) {
 
+        try(BufferedWriter writ = new BufferedWriter(new FileWriter("src\\Lesson8\\task1\\Ishodniy"))){
+          String se = "abba\n" + "tools\n"+ "tooloot\n" + "fdafdf\n" + "dfsddddd\n" + "ddddd\n" + "dgfdgdsgsdgsdg\n" + "gdsgsdgsd";
+       writ.write(se);
+        }
+        catch (IOException e){
+            System.out.println(e);
+        }
+
+
+
+
         try(BufferedReader read = new BufferedReader(new FileReader("src\\Lesson8\\task1\\Ishodniy"));
             BufferedWriter writer = new BufferedWriter(new FileWriter("src\\Lesson8\\task1\\task1.txt"))) {
             String  sd;

@@ -20,6 +20,9 @@ public class Run {
                 }
             }
         }
+        catch (IOException ex){
+            System.out.println(ex.getMessage());
+        }
 
     }
 }
