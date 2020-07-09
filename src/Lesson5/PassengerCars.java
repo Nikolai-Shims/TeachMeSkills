@@ -1,7 +1,5 @@
 package Lesson5;
 
-import com.sun.tools.internal.ws.wsdl.parser.HTTPExtensionHandler;
-import sun.tools.jconsole.MaximizableInternalFrame;
 
 import java.io.IOException;
 import java.util.Scanner;
